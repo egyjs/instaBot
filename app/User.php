@@ -16,7 +16,7 @@ class User extends \TCG\Voyager\Models\User
      * @var array
      */
     protected $fillable = [
-         'email', 'password',
+        'name', 'email', 'password',
     ];
 
     /**
@@ -41,6 +41,7 @@ class User extends \TCG\Voyager\Models\User
        parent::boot();
        static::saving(function ($q){
             $q->username = $q->name;
+           unset($q->name);
         });
     }
 }
