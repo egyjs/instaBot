@@ -16,7 +16,7 @@ class CreateMentionsTable extends Migration
         Schema::create('mentions', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->integer('by')->nullable();
-            $table->longText('url')->nullable();
+            $table->longText('mentions')->nullable();
             $table->integer('count')->nullable();
             $table->timestamps();
             $table->softDeletes();
