@@ -19,6 +19,7 @@ class CreateMentionsTable extends Migration
             $table->longText('url')->nullable();
             $table->integer('count')->nullable();
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 
