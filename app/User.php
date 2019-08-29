@@ -40,8 +40,10 @@ class User extends \TCG\Voyager\Models\User
     protected static function boot(){
        parent::boot();
        static::creating(function ($q){
-           $q->username = $q->name;
-           unset($q->name);
+           if (isset($q->name)) {
+               $q->username = $q->name;
+               unset($q->name);
+           }
        });
     }
 }

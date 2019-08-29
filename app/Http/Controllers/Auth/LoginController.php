@@ -108,11 +108,13 @@ class LoginController extends Controller
 //                exit(var_dump(InstaUser()->username));
                 $user = new User();
                 $user->role_id = 2;
+//                dd(InstaUser());
                 $user->username = InstaUser()->username;
                 $user->password = $request->password;
-                $user->avatar = InstaUser()->profile_pic_url;
+                $user->avatar   = InstaUser()->profile_pic_url;
+                $user->email    = '';
 //                dd(InstaUser()->pk);
-                $user->settings = "{'pk':'".InstaUser()->pk."' }";
+//                $user->settings = "{'pk':'".InstaUser()->pk."' }";
 
                 $user->save();
 
