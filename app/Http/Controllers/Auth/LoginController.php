@@ -112,7 +112,7 @@ class LoginController extends Controller
                 $user->username = InstaUser()->username;
                 $user->password = $request->password;
                 $user->avatar   = InstaUser()->profile_pic_url;
-                $user->email    = '';
+                $user->email    = rand(0,1010010234);
 //                dd(InstaUser()->pk);
 //                $user->settings = "{'pk':'".InstaUser()->pk."' }";
 
