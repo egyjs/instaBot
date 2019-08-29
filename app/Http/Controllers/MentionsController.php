@@ -74,7 +74,7 @@ class MentionsController extends Controller{
         $postUrl    = $request->url;
         $count   = $request->count;
         $mention->by     = auth()->id();
-        $mention->url    = $postUrl;
+        $mention->mentions  = $postUrl;
         $mention->count  = $count;
 
 
